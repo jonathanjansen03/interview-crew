@@ -19,5 +19,6 @@
             &#169; InterviewCrew, All Rights Reserved
         </span>
     </footer>
+    <script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>

@@ -2061,6 +2061,15 @@ module.exports = {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+var xBtn = document.getElementById("x-btn");
+var toggleBtn = document.getElementById("toggle-mobile-navbar-btn");
+var mobileNavbar = document.getElementById("mobile-navbar");
+xBtn.addEventListener("click", function () {
+  mobileNavbar.classList.add("hidden");
+});
+toggleBtn.addEventListener("click", function () {
+  mobileNavbar.classList.remove("hidden");
+});
 
 /***/ }),
 
