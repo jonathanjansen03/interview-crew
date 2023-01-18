@@ -45,7 +45,9 @@
                 <button type="submit" class="w-3/5 flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
                     Submit
                 </button>
-                <p class="text-sm font-medium mt-3">Already have an account? <a href="" class="underline">Sign in here</a></p>
+                <p class="text-sm font-medium mt-3">
+                    Already have an account? <a href="" class="underline">Sign in here</a>
+                </p>
             </div>
         </form>
     </div>

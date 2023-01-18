@@ -561,6 +561,10 @@ video {
   top: 13rem;
   bottom: 13rem;
 }
+.inset-y-36{
+  top: 9rem;
+  bottom: 9rem;
+}
 .top-0{
   top: 0px;
 }
