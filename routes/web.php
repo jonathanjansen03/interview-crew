@@ -45,6 +45,10 @@ Route::get('/login', function() {
     return view('login');
 });
 
+Route::get('/home', function() {
+    return view('pages.home');
+});
+
 Route::get('/profile', function() {
     return view('pages.profile');
 });

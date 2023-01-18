@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Request Interview')
+@section('title', 'Edit Profile')
 
 @section('main-content')
     <div class="relative">
@@ -8,8 +8,8 @@
         <img src="{{ asset('/images/triangular-ribbon.png') }}" alt="" class="fixed top-80 overflow-hidden w-96">
     </div>
     
-    <main class="relative flex justify-center align-middle">
-        <div class="flex flex-col justify-center align-middle absolute bg-white drop-shadow-lg inset-y-12 w-fit h-fit py-5 px-6 rounded-xl">
+    <main class="relative flex justify-center">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-12 w-fit h-fit py-5 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Edit Profile</h3>
 
             {{-- nanti value ganti sama old value usernya --}}
