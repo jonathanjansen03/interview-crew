@@ -19,3 +19,7 @@ Route::middleware(['logged.user'])->group(function () {
 Route::middleware(['unlogged.user'])->group(function () {
  
 });
+
+Route::middleware(['admin.check'])->group(function () {
+ 
+});
