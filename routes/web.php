@@ -20,6 +20,10 @@ Route::middleware(['unlogged.user'])->group(function () {
  
 });
 
+Route::middleware(['admin.check'])->group(function () {
+ 
+});
+
 Route::get('/register', function() {
     return view('register');
 });
