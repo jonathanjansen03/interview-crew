@@ -5,7 +5,7 @@
 @section('main-content')
     <main class="relative flex justify-center align-middle">
         <div class="flex flex-col justify-center align-middle absolute bg-white drop-shadow-lg inset-y-60 w-1/4 h-64 px-6 rounded-xl">
-            <h3 class="text-black font-bold text-2xl ">Create Job Field</h3>
+            <h3 class="text-black font-bold text-2xl">Create Job Field</h3>
 
             <form action="" class="flex flex-col mt-5">
                 <label for="job-field-name" class="font-medium">Job Field Name</label>
