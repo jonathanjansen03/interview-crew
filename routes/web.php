@@ -24,6 +24,11 @@ Route::middleware(['admin.check'])->group(function () {
  
 });
 
+// route admin
+
+Route::get('/create-job', function() {
+    return view('admin.create-job');
+});
 
 Route::get('/', function() {
     return view('pages.landing');

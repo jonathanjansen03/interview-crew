@@ -4,8 +4,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-footer {
-    margin-top: 25rem;
+#landing-main {
+    margin-bottom: 25rem;
 }
 
 #reach-out {
