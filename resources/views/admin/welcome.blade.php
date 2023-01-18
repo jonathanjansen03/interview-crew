@@ -4,7 +4,7 @@
 
 @section('main-content')
     <main class="relative flex justify-center items-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-60 w-1/4 h-64 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-52 w-1/4 h-64 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Welcome Admin!</h3>
 
             <div class="flex flex-col">

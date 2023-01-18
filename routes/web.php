@@ -34,37 +34,37 @@ Route::get('/welcome-admin', function() {
 });
 
 Route::get('/', function() {
-    return view('pages.landing');
+    return view('home.landing');
 });
 
 Route::get('/register', function() {
-    return view('register');
+    return view('home.register');
 });
 
 Route::get('/login', function() {
-    return view('login');
+    return view('home.login');
 });
 
 Route::get('/home', function() {
-    return view('pages.home');
+    return view('user.home');
 });
 
 Route::get('/profile', function() {
-    return view('pages.profile');
+    return view('user.profile');
 });
 
 Route::get('/profile/edit', function() {
-    return view('pages.edit-profile');
+    return view('user.edit-profile');
 });
 
 Route::get('/request-interview', function() {
-    return view('pages.request-interview');
+    return view('user.request-interview');
 });
 
 Route::get('/cancel-interview', function() {
-    return view('pages.cancel-interview');
+    return view('user.cancel-interview');
 });
 
 Route::get('/test', function() {
-    return view('pages.test');
+    return view('test');
 });

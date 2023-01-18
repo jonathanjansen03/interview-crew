@@ -17,7 +17,7 @@
             <button type="submit" class="xl:w-1/4 lg:w-1/3 md:w-1/3 flex items-center justify-center border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
                 Book now
             </button>
-            <img src="{{ asset('/images/interview.png') }}" alt="" class="absolute bottom-0 right-0 w-4/6">
+            <img src="{{ asset('/images/interviewer.png') }}" alt="" class="absolute bottom-0 right-0 w-4/6">
         </div>
 
         <div class="flex flex-col gap-y-5">

@@ -9,7 +9,7 @@
     </div>
 
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-32 w-2/6 h-fit py-5 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-28 w-2/6 h-fit py-7 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Cancel Interview Request</h3>
 
             <p class="font-medium mt-5">
