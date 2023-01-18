@@ -23,3 +23,11 @@ Route::middleware(['unlogged.user'])->group(function () {
 Route::middleware(['admin.check'])->group(function () {
  
 });
+
+Route::get('/', function() {
+    return view('pages.landing');
+});
+
+Route::get('/test', function() {
+    return view('pages.test');
+});
