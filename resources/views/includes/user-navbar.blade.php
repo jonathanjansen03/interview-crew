@@ -16,13 +16,13 @@
                 </button>
             </div>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800">
+                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Home
                 </button>
-                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800">
+                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Profile
                 </button>
-                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800">
+                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Log Out
                 </button>
             </div>
@@ -49,13 +49,13 @@
             <div class="py-6 px-5 space-y-6">
                 <div>
                     <p class="mt-6 text-center text-base font-medium">
-                        <button type="button" class="text-blue-600 hover:text-blue-500">
+                        <button type="button" class="text-blue-600 hover:text-blue-500 duration-200">
                             Home
                         </button>
-                        <button type="button" class="text-blue-600 hover:text-blue-500">
+                        <button type="button" class="text-blue-600 hover:text-blue-500 duration-200">
                             Profile
                         </button>
-                        <button type="button" class="text-blue-600 hover:text-blue-500">
+                        <button type="button" class="text-blue-600 hover:text-blue-500 duration-200">
                             Log Out
                         </button>
                     </p>

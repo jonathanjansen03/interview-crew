@@ -24,10 +24,13 @@ Route::middleware(['admin.check'])->group(function () {
  
 });
 
-// route admin
+// admin routes
+Route::get('/create-job-field', function() {
+    return view('admin.create-job-field');
+});
 
-Route::get('/create-job', function() {
-    return view('admin.create-job');
+Route::get('/welcome-admin', function() {
+    return view('admin.welcome');
 });
 
 Route::get('/', function() {

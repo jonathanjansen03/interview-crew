@@ -16,10 +16,10 @@
                 </button>
             </div>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800">
+                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Sign in
                 </button>
-                <button type="button" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-semibold text-white bg-blue-800 hover:bg-blue-900">
+                <button type="button" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-semibold text-white bg-blue-800 hover:bg-blue-900 duration-200">
                     Sign up
                 </button>
             </div>
@@ -45,12 +45,12 @@
             </div>
             <div class="py-6 px-5 space-y-6">
                 <div>
-                    <button type="button" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                    <button type="button" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 duration-200">
                         Sign up
                     </button>
                     <p class="mt-6 text-center text-base font-medium text-gray-500">
                         Existing customer?
-                        <button type="button" class="text-blue-600 hover:text-blue-500">
+                        <button type="button" class="text-blue-600 hover:text-blue-500 duration-200">
                             Sign in
                         </button>
                     </p>
