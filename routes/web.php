@@ -49,6 +49,10 @@ Route::get('/profile', function() {
     return view('pages.profile');
 });
 
+Route::get('/profile/edit', function() {
+    return view('pages.edit-profile');
+});
+
 Route::get('/request-interview', function() {
     return view('pages.request-interview');
 });

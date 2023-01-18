@@ -18,8 +18,8 @@
                     <input type="text" id="job-field-name" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
-                <div class="flex flex-col">
-                    <label for="interview-date-and-time" class="font-medium mt-5">Date and Time</label>
+                <div class="flex flex-col mt-5">
+                    <label for="interview-date-and-time" class="font-medium">Date and Time</label>
                     <select id="interview-date-and-time" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                         {{-- ntar looping --}}
                         <option value="Mon, 16 Jan 2023 12:00">Mon, 16 Jan 2023 12:00</option>
@@ -28,9 +28,9 @@
                     </select>
                 </div>
 
-                <div class="flex flex-col">
-                    <label for="interview-date-and-time" class="font-medium mt-5">Field</label>
-                    <select id="interview-date-and-time" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
+                <div class="flex flex-col mt-5">
+                    <label for="interview-field" class="font-medium">Field</label>
+                    <select id="interview-field" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                         {{-- ntar looping --}}
                         <option value="Software Engineer">Software Engineer</option>
                         <option value="Biomedics">Biomedics</option>

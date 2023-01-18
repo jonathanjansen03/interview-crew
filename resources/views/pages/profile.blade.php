@@ -7,8 +7,9 @@
         <img src="{{ asset('/images/double-ribbon.png') }}" alt="" class="fixed top-0 right-0 z-0">
         <img src="{{ asset('/images/triangular-ribbon.png') }}" alt="" class="fixed top-80 overflow-hidden w-96">
     </div>
+    
     <main class="relative flex justify-center align-middle">
-        <div class="flex flex-col justify-center align-middle absolute bg-white drop-shadow-lg inset-y-32 w-2/6 h-fit py-5 px-6 rounded-xl">
+        <div class="flex flex-col justify-center align-middle absolute bg-white drop-shadow-lg inset-y-44 w-2/6 h-fit py-5 px-6 rounded-xl">
             {{-- ntar diganti {{username}} --}}
             <h3 class="text-black font-bold text-2xl">Adipati_Dolken</h3>
 
