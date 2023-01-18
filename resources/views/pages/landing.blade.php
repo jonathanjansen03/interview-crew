@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Add Category')
+@section('title', 'Landing')
 
 @section('main-content')
     <main id="landing-main" class="lg:relative mt-10">

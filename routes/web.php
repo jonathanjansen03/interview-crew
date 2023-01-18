@@ -45,9 +45,12 @@ Route::get('/login', function() {
     return view('login');
 });
 
+Route::get('/request-interview', function() {
+    return view('pages.request-interview');
+});
 
-Route::get('/home', function() {
-    return view('pages.home');
+Route::get('/cancel-interview', function() {
+    return view('pages.cancel-interview');
 });
 
 Route::get('/test', function() {

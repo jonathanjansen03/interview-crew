@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Add Category')
+@section('title', 'Welcome')
 
 @section('main-content')
     <main class="relative flex justify-center align-middle">
