@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <label for="interview-shift" class="font-medium">Field</label>
+                        <label for="interview-shift" class="font-medium">Shift</label>
                         <select name="interview_shift" id="interview_shift" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none h-9 w-56">
                             <option value="1">07:00 - 09:00</option>
                             <option value="2">09:00 - 11:00</option>
