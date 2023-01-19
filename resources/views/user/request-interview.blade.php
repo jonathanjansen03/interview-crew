@@ -22,7 +22,7 @@
                 <div class="flex mt-5 gap-x-5 items-center">
                     <div class="flex flex-col">
                         <label for="date" class="font-medium">Date and Time</label>
-                        <input type="datetime-local" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none" id="date" name="date">
+                        <input type="date" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none" id="date" name="date">
                     </div>
 
                     <div class="flex flex-col">
