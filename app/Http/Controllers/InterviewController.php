@@ -35,7 +35,7 @@ class InterviewController extends Controller
 
         return redirect('/home');
     }
-
+    
     public function admin(){
         return view('admin.welcome');
     }
