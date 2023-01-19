@@ -17,11 +17,11 @@ class CreateInterviewsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
-            $table->datetime('date');
+            $table->date('date');
+            $table->integer('shift');
             $table->bigInteger('field_id')->unsigned();
             $table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
-            $table->string('link');
-            $table->timestamps();
+            $table->string('status');
         });
     }
 
