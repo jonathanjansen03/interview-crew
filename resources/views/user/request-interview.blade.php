@@ -27,13 +27,13 @@
 
                     <div class="flex flex-col">
                         <label for="interview-shift" class="font-medium">Field</label>
-                        <select name="interview-shift" id="interview-shift" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none h-9 w-56">
-                            <option value="shift-1">07:00 - 09:00</option>
-                            <option value="shift-2">09:00 - 11:00</option>
-                            <option value="shift-3">11:00 - 13:00</option>
-                            <option value="shift-4">13:00 - 15:00</option>
-                            <option value="shift-5">15:00 - 17:00</option>
-                            <option value="shift-6">17:00 - 19:00</option>
+                        <select name="interview_shift" id="interview_shift" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none h-9 w-56">
+                            <option value="1">07:00 - 09:00</option>
+                            <option value="2">09:00 - 11:00</option>
+                            <option value="3">11:00 - 13:00</option>
+                            <option value="4">13:00 - 15:00</option>
+                            <option value="5">15:00 - 17:00</option>
+                            <option value="6">17:00 - 19:00</option>
                         </select>
                     </div>
                 </div>

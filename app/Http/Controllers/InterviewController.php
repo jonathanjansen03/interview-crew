@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Interview;
-use App\Models\Field;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-
+use App\Models\Field;
+ 
 class InterviewController extends Controller
 {
 
@@ -93,18 +93,24 @@ class InterviewController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' =>'required', 
-            'date' => 'required',
-            'link' => 'required'
-        ]);
+        
+        $title = $request->title;
+        $date = $request->date;
+        $fieldId = Field::where("name", $request->field_id)->get()->first()->id;
+        $link = $request->link;
 
-        Interview::create([
-            'title' => $request->title, 
-            'date' => $request->date, 
-            'field_id' => $request->field_id,
-            'link' => $request->link
-        ]);
+        $interview = new Interview;
+        $interview->user_id = Auth::id();
+        $interview->title = $title;
+        $interview->date  = $date;
+        $interview->status = 'Accepted';
+
+
+        $interview->field_id = $fieldId;
+        $interview->link = $link;
+        $interview->shift = (int)$request->inverview_shift;
+        $interview->save();
+
 
         return redirect('/home');
     }
