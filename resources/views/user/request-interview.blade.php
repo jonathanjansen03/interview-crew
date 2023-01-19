@@ -12,35 +12,30 @@
         <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-1/4 h-fit py-10 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Interview Schedule Request</h3>
 
-            <form action="" class="flex flex-col">
+            <form action="/store" method="POST" enctype="multipart/form-data" class="flex flex-col">
+                @csrf
                 <div class="flex flex-col mt-5">
-                    <label for="interview-title" class="font-medium">Title</label>
-                    <input type="text" id="interview-title" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
+                    <label for="title" class="font-medium">Title</label>
+                    <input type="text" id="title" name="title" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div class="flex flex-col mt-5">
-                    <label for="interview-date-and-time" class="font-medium">Date and Time</label>
-                    <select id="interview-date-and-time" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
-                        {{-- ntar looping --}}
-                        <option value="Mon, 16 Jan 2023 12:00">Mon, 16 Jan 2023 12:00</option>
-                        <option value="Tue, 17 Jan 2023 12:00">Tue, 17 Jan 2023 12:00</option>
-                        <option value="Wed, 18 Jan 2023 12:00">Wed, 18 Jan 2023 12:00</option>
-                    </select>
+                    <label for="date" class="font-medium">Date and Time</label>
+                    <input type="datetime-local" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none" id="date" name="date">
                 </div>
 
                 <div class="flex flex-col mt-5">
                     <label for="interview-field" class="font-medium">Field</label>
-                    <select id="interview-field" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
-                        {{-- ntar looping --}}
-                        <option value="Software Engineer">Software Engineer</option>
-                        <option value="Biomedics">Biomedics</option>
-                        <option value="Physics">Physics</option>
+                    <select name="field_id" id="interview-field" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
+                        @foreach($fields as $field)
+                            <option value="{{$field->id}}">{{$field->name}}</option>
+                        @endforeach
                     </select>
                 </div>
 
                 <div class="flex flex-col mt-5">
-                    <label for="interview-link" class="font-medium">Meeting Link</label>
-                    <input type="text" id="interview-link" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
+                    <label for="link" class="font-medium">Meeting Link</label>
+                    <input type="text" id="link" name="link" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div class="flex justify-center">

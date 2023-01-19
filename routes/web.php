@@ -28,13 +28,10 @@ Route::middleware(['admin.check'])->group(function () {
 });
 
 // admin routes
-Route::get('/create-job-field', function() {
-    return view('admin.create-job-field');
-});
+Route::get('/welcome-admin', [InterviewController::class, 'admin']);
+Route::get('/create-job-field', [FieldController::class, 'index']);
+Route::post('/create-job-field', [FieldController::class, 'store']);
 
-Route::get('/welcome-admin', function() {
-    return view('admin.welcome');
-});
 
 Route::get('/', function() {
     return view('home.landing');
@@ -48,9 +45,7 @@ Route::get('/login', function() {
     return view('home.login');
 });
 
-Route::get('/home', function() {
-    return view('user.home');
-});
+Route::get('/home',[InterviewController::class, 'home']);
 
 Route::get('/profile', function() {
     return view('user.profile');
@@ -60,9 +55,8 @@ Route::get('/profile/edit', function() {
     return view('user.edit-profile');
 });
 
-Route::get('/request-interview', function() {
-    return view('user.request-interview');
-});
+Route::get('/request-interview', [InterviewController::class, 'create']);
+Route::post('/store', [InterviewController::class, 'store']);
 
 Route::get('/cancel-interview', function() {
     return view('user.cancel-interview');
@@ -72,16 +66,6 @@ Route::get('/test', function() {
     return view('test');
 });
 
-//user
-Route::get('/home', [InterviewController::class, 'home']);
-Route::get('/create', [InterviewController::class, 'create']);
-Route::post('/store', [InterviewController::class, 'store']);
-Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
-
-//admin
-Route::get('/admin', [InterviewController::class, 'admin']);
-Route::get('/field', [FieldController::class, 'index']);
-Route::post('/field', [FieldController::class, 'store']);
 
 //both
-Route::get('/profile', [UserController::class, 'user']);
+// Route::get('/profile', [UserController::class, 'user']);
