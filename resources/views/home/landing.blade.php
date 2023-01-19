@@ -89,9 +89,9 @@
                                     What are you waiting for?
                                 </p>
                                 <div class="rounded-md shadow">
-                                    <button type="button" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-4 md:text-lg md:px-14 mt-10">
+                                    <a href="/register" type="button" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-4 md:text-lg md:px-14 mt-10">
                                         Sign up
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
