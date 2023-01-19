@@ -23,6 +23,7 @@ class CreateInterviewsTable extends Migration
             $table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
             $table->string('link');
             $table->string('status');
+            $table->string('link');
         });
     }
 
