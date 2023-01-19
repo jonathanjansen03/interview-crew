@@ -47,7 +47,7 @@
                     Submit
                 </button>
                 <p class="text-sm font-medium mt-3">
-                    Already have an account? <a href="" class="underline">Sign in here</a>
+                    Already have an account? <a href="/login" class="underline">Sign in here</a>
                 </p>
             </div>
         </form>
