@@ -20,6 +20,10 @@ class UserController extends Controller
         return view('user.home');
     }
 
+    public function profileView(){
+        return view ('user.profile');
+    }
+
     public function landingView(){
         return view('home.landing');
     }
@@ -51,7 +55,7 @@ class UserController extends Controller
         }
     }
 
-    public function profileView(){
+    public function editProfileView(){
         $id = Auth::id();
         $user = User::find($id);
         return view ('user.edit-profile', compact('user'));

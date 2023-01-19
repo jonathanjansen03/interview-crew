@@ -26,11 +26,16 @@ class InterviewController extends Controller
         $rShift = 1;
         $iShift = 1;
 
+        $iField = "";
+        $rField = "";
         if ($recentInterviews != null){
             $rShift = $recentInterviews->shift;
+            $rField = Field::find($recentInterviews->field_id)->name;
         }
-        if ($interviews != null ){
+        $count = $interviews->count();
+        if ($count != 0 ){
             $iShift = $interviews[0]->shift;
+            $iField = Field::find($interviews[0]->field_id)->name;
         }
 
         $rTime = "";
@@ -79,8 +84,6 @@ class InterviewController extends Controller
                 break;
         }
 
-        $rField = Field::find($recentInterviews->field_id)->name;
-        $iField = Field::find($interviews[0]->field_id)->name;
 
 
         return view('user.home', compact('interviews', 'recentInterviews', 'iTime', 'rTime', 'rField', 'iField'));

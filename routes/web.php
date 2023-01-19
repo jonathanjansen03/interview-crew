@@ -31,8 +31,9 @@ Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/request-interview', [InterviewController::class, 'create']);
     Route::post('/store', [InterviewController::class, 'store']);
     Route::post('/edit-profile', [UserController::class, 'updateProfile']);
-    Route::get('/edit-profile', [UserController::class, 'profileView']);
-    Route::post('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
+    Route::get('/edit-profile', [UserController::class, 'editProfileView']);
+    Route::get('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
+    Route::get('/profile', [UserController::class, 'profileView']);
 });
 
 // Route::middleware(['admin.check'])->group(function () {
@@ -50,10 +51,6 @@ Route::get('/login', function() {
     return view('home.login');
 });
 
-
-Route::get('/profile/edit', function() {
-    return view('user.edit-profile');
-});
 
 Route::get('/cancel-interview', function() {
     return view('user.cancel-interview');
