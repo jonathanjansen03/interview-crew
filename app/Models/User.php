@@ -45,6 +45,6 @@ class User extends Authenticatable
     ];
 
     public function interview(){
-        return $this->belongsTo(Interview::class);
+        return $this->hasOne(Interview::class);
     }
 }

@@ -48,6 +48,22 @@ class UserController extends Controller
         } 
     }
 
+    public function updateProfile(Request $request){
+        $username = $request->username;
+        $email = $request->email;
+        $phone = $request->phone;
+        $fullName = $request->full_name;
+
+        $user = User::find(Auth::id());
+        $user->full_name = $fullName;
+        $user->username = $username;
+        $user->email = $email;
+        $user->phone_number = $phone;
+        $user->save();
+
+        return redirect('/home');
+    }
+
     public function logout(){
         Auth::logout();
         return redirect('/');

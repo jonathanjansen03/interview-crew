@@ -20,7 +20,6 @@ class CreateInterviewsTable extends Migration
             $table->datetime('date');
             $table->bigInteger('field_id')->unsigned();
             $table->foreign('field_id')->references('id')->on('fields')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
