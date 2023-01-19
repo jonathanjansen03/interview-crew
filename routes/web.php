@@ -68,3 +68,6 @@ Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
 
 //both
 // Route::get('/profile', [UserController::class, 'user']);
+Route::get('/interview-history', function() {
+    return view('user.interview-history');
+});
