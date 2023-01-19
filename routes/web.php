@@ -24,20 +24,22 @@ Route::middleware(['logged.user'])->group(function () {
     Route::get('/register', [UserController::class, 'registerView']);
     Route::get('/login', [UserController::class, 'loginView']);
 });
-    
+
 Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/home', [InterviewController::class, 'home']);
     Route::get('/logout', [UserController::class , 'logout']);
     Route::get('/request-interview', [InterviewController::class, 'create']);
     Route::post('/store', [InterviewController::class, 'store']);
+    Route::get('/profile', [UserController::class, 'user.profile']);
 });
 
-Route::middleware(['admin.check'])->group(function () {
+// Route::middleware(['admin.check'])->group(function () {
     // admin routes
     Route::get('/welcome-admin', [UserController::class, 'adminView']);
     Route::get('/create-job-field', [UserController::class, 'createJobView']);
     Route::post('/create-job-field', [FieldController::class, 'store']);
-});
+    Route::get('/profile', [UserController::class, 'user']);
+// });
 
 Route::get('/', function() {
     return view('home.landing');
@@ -47,9 +49,6 @@ Route::get('/login', function() {
     return view('home.login');
 });
 
-Route::get('/profile', function() {
-    return view('user.profile');
-});
 
 Route::get('/profile/edit', function() {
     return view('user.edit-profile');

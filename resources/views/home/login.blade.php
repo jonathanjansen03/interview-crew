@@ -24,7 +24,7 @@
                     Submit
                 </button>
                 <p class="text-sm font-medium mt-3">
-                    Don't have an account? <a href="" class="underline">Register here</a>
+                    Don't have an account? <a href="/register" class="underline">Register here</a>
                 </p>
             </div>
         </form>
