@@ -14,9 +14,11 @@
 
             <div class="flex flex-col">
                 <div class="flex flex-col">
-                    <button type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
-                        Create Job Field
-                    </button>
+                    <a href="/create-job-field">
+                        <button type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
+                            Create Job Field
+                        </button>
+                    </a>
                     <button type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
                         Edit Profile
                     </button>
