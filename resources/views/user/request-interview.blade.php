@@ -9,13 +9,13 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-24 w-1/4 h-fit py-10 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-1/4 h-fit py-10 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Interview Schedule Request</h3>
 
-            <form action="" class="flex flex-col mt-5">
-                <div class="flex flex-col">
+            <form action="" class="flex flex-col">
+                <div class="flex flex-col mt-5">
                     <label for="interview-title" class="font-medium">Title</label>
-                    <input type="text" id="job-field-name" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
+                    <input type="text" id="interview-title" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div class="flex flex-col mt-5">
@@ -36,6 +36,11 @@
                         <option value="Biomedics">Biomedics</option>
                         <option value="Physics">Physics</option>
                     </select>
+                </div>
+
+                <div class="flex flex-col mt-5">
+                    <label for="interview-link" class="font-medium">Meeting Link</label>
+                    <input type="text" id="interview-link" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
                 <div class="flex justify-center">
