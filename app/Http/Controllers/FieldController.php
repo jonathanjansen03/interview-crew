@@ -8,7 +8,7 @@ use App\Models\Field;
 class FieldController extends Controller
 {
     public function index(){
-        return view('field');
+        return view('admin.create-job-field');
     }
 
     public function store(Request $request){
@@ -16,6 +16,6 @@ class FieldController extends Controller
             'name' => $request->field
         ]);
 
-        return redirect('/admin');
+        return redirect('welcome-admin');
     }
 }

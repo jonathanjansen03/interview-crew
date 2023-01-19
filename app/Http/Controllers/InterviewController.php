@@ -15,25 +15,30 @@ class InterviewController extends Controller
 
     public function create(){
         $fields = Field::all();
-        return view('create', compact('fields'));
+        return view('user.request-interview', compact('fields'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'title' =>'required', 
-            'date' => 'required'
+            'date' => 'required',
+            'link' => 'required'
         ]);
 
         Interview::create([
             'title' => $request->title, 
             'date' => $request->date, 
-            'field_id' => $request->field_id
+            'field_id' => $request->field_id,
+            'link' => $request->link
         ]);
 
-        return redirect('/home')->with('success', 'Interview Made Succesfully');
+        return redirect('/home');
     }
-
+    
+    public function admin(){
+        return view('admin.welcome');
+    }
 
     public function delete($id){
         Interview::destroy($id);
