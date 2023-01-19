@@ -96,7 +96,6 @@ class InterviewController extends Controller
         
         $title = $request->title;
         $date = $request->date;
-        $fieldId = Field::where("name", $request->field_id)->get()->first()->id;
         $link = $request->link;
 
         $interview = new Interview;
@@ -105,8 +104,7 @@ class InterviewController extends Controller
         $interview->date  = $date;
         $interview->status = 'Accepted';
 
-
-        $interview->field_id = $fieldId;
+        $interview->field_id = $request->field_id;
         $interview->link = $link;
         $interview->shift = (int)$request->inverview_shift;
         $interview->save();
