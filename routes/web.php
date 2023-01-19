@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InterviewController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\FieldController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +20,11 @@ Route::middleware(['logged.user'])->group(function () {
 });
     
 Route::middleware(['unlogged.user'])->group(function () {
- 
+    
 });
 
 Route::middleware(['admin.check'])->group(function () {
- 
+
 });
 
 // admin routes
@@ -68,3 +71,17 @@ Route::get('/cancel-interview', function() {
 Route::get('/test', function() {
     return view('test');
 });
+
+//user
+Route::get('/home', [InterviewController::class, 'home']);
+Route::get('/create', [InterviewController::class, 'create']);
+Route::post('/store', [InterviewController::class, 'store']);
+Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
+
+//admin
+Route::get('/admin', [InterviewController::class, 'admin']);
+Route::get('/field', [FieldController::class, 'index']);
+Route::post('/field', [FieldController::class, 'store']);
+
+//both
+Route::get('/profile', [UserController::class, 'user']);
