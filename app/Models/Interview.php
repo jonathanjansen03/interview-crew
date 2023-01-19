@@ -14,4 +14,8 @@ class Interview extends Model
     public function field(){
         return $this->belongsTo('App\Models\Field');
     }
+
+    public function user(){
+        return $this->hasOne(User::class);
+    }
 }

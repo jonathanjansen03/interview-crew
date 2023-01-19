@@ -10,7 +10,7 @@ class InterviewController extends Controller
 {
     public function home(){
         $interviews = Interview::all();
-        return view('home', compact('interviews'));
+        return view('user.home', compact('interviews'));
     }
 
     public function create(){
@@ -34,9 +34,6 @@ class InterviewController extends Controller
         return redirect('/home')->with('success', 'Interview Made Succesfully');
     }
 
-    public function admin(){
-        return view('admin');
-    }
 
     public function delete($id){
         Interview::destroy($id);

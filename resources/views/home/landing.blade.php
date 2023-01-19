@@ -14,9 +14,9 @@
                 </p>
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
-                        <button type="button" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-4 md:text-lg md:px-14">
+                        <a href="/register" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-4 md:text-lg md:px-14">
                             Sign up
-                        </button>
+                        </a>
                     </div>
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <button type="button" href="#" class="w-full flex items-center justify-center px-4 py-3 border border-blue-800 text-base font-medium rounded-md text-blue-800 bg-white hover:bg-gray-100 duration-200 md:py-4 md:text-lg md:px-10">

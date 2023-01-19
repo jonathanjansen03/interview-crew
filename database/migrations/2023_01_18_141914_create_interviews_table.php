@@ -15,6 +15,7 @@ class CreateInterviewsTable extends Migration
     {
         Schema::create('interviews', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
             $table->datetime('date');
             $table->bigInteger('field_id')->unsigned();

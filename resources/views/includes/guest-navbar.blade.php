@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
+                <a href="/">
                 <span class="sr-only">Logo</span>
                 <img class="h-8 w-auto sm:h-10" src="{{ asset('/images/logo.png') }}" alt="">
                 </a>
@@ -16,12 +16,12 @@
                 </button>
             </div>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <button type="button" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
+                <a href="/login" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Sign in
-                </button>
-                <button type="button" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-semibold text-white bg-blue-800 hover:bg-blue-900 duration-200">
+                </a>
+                <a href ="/register" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-semibold text-white bg-blue-800 hover:bg-blue-900 duration-200">
                     Sign up
-                </button>
+                </a>
             </div>
         </div>
     </div>

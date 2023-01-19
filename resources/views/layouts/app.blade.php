@@ -10,9 +10,13 @@
 <body>
     <div class="relative bg-gray-50 min-h-screen">
         {{-- nanti pake if else, kalo udah login ganti ke user navbar --}}
-        @include('includes.guest-navbar')
-        {{-- @include('includes.user-navbar') --}}
-        
+        @guest 
+            @include('includes.guest-navbar')
+        @endguest 
+        @auth
+            @include('includes.user-navbar')
+        @endauth
+         
         @yield('main-content')
     </div>
 
