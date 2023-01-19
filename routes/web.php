@@ -23,13 +23,13 @@ Route::middleware(['logged.user'])->group(function () {
     Route::get('/', [UserController::class, 'landingView']);
     Route::get('/register', [UserController::class, 'registerView']);
     Route::get('/login', [UserController::class, 'loginView']);
-    Route::get('/request-interview', [InterviewController::class, 'create']);
-    Route::post('/store', [InterviewController::class, 'store']);
 });
     
 Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/home', [InterviewController::class, 'home']);
     Route::get('/logout', [UserController::class , 'logout']);
+    Route::get('/request-interview', [InterviewController::class, 'create']);
+    Route::post('/store', [InterviewController::class, 'store']);
 });
 
 Route::middleware(['admin.check'])->group(function () {
