@@ -19,12 +19,12 @@
                             Create Job Field
                         </button>
                     </a>
-                    <button type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
+                    <a href="/edit-profile" type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
                         Edit Profile
-                    </button>
-                    <button type="submit" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
+                    </a>
+                    <a href="/interview-list" class="w-full flex items-center justify-center px-1 py-0 border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg md:px-14">
                         Interview List
-                    </button>
+                    </a >
                 </div>
             </div>
         </div>

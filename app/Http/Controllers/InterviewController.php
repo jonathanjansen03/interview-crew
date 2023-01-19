@@ -10,13 +10,28 @@ use Carbon\Carbon;
 
 class InterviewController extends Controller
 {
+
+    public function cancelInterview($id){
+        Interview::destroy($id);
+        
+        return redirect('/home');
+    }
+
     public function home(){
         $id = Auth::id();
         $recentInterviews = Interview::where('user_id', $id)->where('status', 'Done')->get()->last();
         $interviews = Interview::where('user_id', $id)->where('status', 'Accepted')->get();
 
-        $rShift = $recentInterviews->shift;
-        $iShift = $interviews[0]->shift;
+
+        $rShift = 1;
+        $iShift = 1;
+
+        if ($recentInterviews != null){
+            $rShift = $recentInterviews->shift;
+        }
+        if ($interviews != null ){
+            $iShift = $interviews[0]->shift;
+        }
 
         $rTime = "";
         $iTime = "";

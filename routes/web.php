@@ -30,14 +30,17 @@ Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/logout', [UserController::class , 'logout']);
     Route::get('/request-interview', [InterviewController::class, 'create']);
     Route::post('/store', [InterviewController::class, 'store']);
+    Route::post('/edit-profile', [UserController::class, 'updateProfile']);
+    Route::get('/edit-profile', [UserController::class, 'profileView']);
+    Route::post('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
 });
 
-Route::middleware(['admin.check'])->group(function () {
-    // admin routes
+// Route::middleware(['admin.check'])->group(function () {
+
     Route::get('/welcome-admin', [UserController::class, 'adminView']);
     Route::get('/create-job-field', [UserController::class, 'createJobView']);
     Route::post('/create-job-field', [FieldController::class, 'store']);
-});
+// });
 
 Route::get('/', function() {
     return view('home.landing');

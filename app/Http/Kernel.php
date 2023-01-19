@@ -46,8 +46,8 @@ class Kernel extends HttpKernel
         ],
 
         'admin.check' =>[
-            \App\Http\Middleware\checkUserLogin::class,
-            \App\Http\Middleware\CheckIsAdmin::class
+            \App\Http\Middleware\loggedUserMiddleware::class,
+            \App\Http\Middleware\checkUserLogin::class
         ]
     ];
 

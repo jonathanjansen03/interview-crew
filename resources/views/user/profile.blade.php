@@ -26,9 +26,9 @@
             </p>
 
             <div class="flex">
-                <button type="button" class="2xl:w-2/6 xl:w-2/6 lg:w-3/6 md:3/4 flex items-center justify-center border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 py-2 md:text-lg px-4">
+                <a href="/edit-profile" class="2xl:w-2/6 xl:w-2/6 lg:w-3/6 md:3/4 flex items-center justify-center border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 py-2 md:text-lg px-4">
                     Edit Profile
-                </button>
+                </a>
             </div>
         </div>
     </main>

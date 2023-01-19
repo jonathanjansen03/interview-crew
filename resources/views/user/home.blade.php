@@ -37,9 +37,9 @@
                 <p class="text-md font-medium mt-3">Time: {{$iTime}}</p>
                 <p class="text-md font-medium mt-3">Field: {{$iField}}</p>
                 <p class="text-md font-medium mt-3">Link: meet.google.com/xxx-xxx-xxx</p>
-                <button type="submit" class="xl:w-1/3 lg:w-1/3 md:w-1/3 flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-red-600 hover:bg-red-700 duration-200 md:py-2 md:text-lg px-5">
+                <a href="/cancel/interview/{{$interviews[0]->id}}" class="xl:w-1/3 lg:w-1/3 md:w-1/3 flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-red-600 hover:bg-red-700 duration-200 md:py-2 md:text-lg px-5">
                     Cancel
-                </button>
+                </a>
             </div>
         </div>
     </div>
