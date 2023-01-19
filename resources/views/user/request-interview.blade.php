@@ -9,7 +9,7 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-1/4 h-fit py-10 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-2/5 h-fit py-10 px-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Interview Schedule Request</h3>
 
             <form action="/store" method="POST" enctype="multipart/form-data" class="flex flex-col">
@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <label for="interview-shift" class="font-medium">Field</label>
+                        <label for="interview-shift" class="font-medium">Shift</label>
                         <select name="interview-shift" id="interview-shift" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none h-9 w-56">
                             <option value="shift-1">07:00 - 09:00</option>
                             <option value="shift-2">09:00 - 11:00</option>
@@ -58,6 +58,23 @@
                     </button>
                 </div>
             </form>
+            @if (\Session::has('errors'))
+                    <div class="flex items-center text-center justify-center">
+                        <div style="text-align: center;">
+                            <h1 style="text-align: center; color: red;">
+                                {{ \Session::get('errors') }}
+                            </h1>
+                        </div>
+                    </div>
+                @elseif (\Session::has('success'))
+                    <div class="flex items-center text-center justify-center">
+                        <div style="text-align: center;">
+                            <h1 style="text-align: center; color: green;">
+                                {{ \Session::get('success') }}
+                            </h1>
+                        </div>
+                    </div>
+                @endif
         </div>
     </main>
 @endsection

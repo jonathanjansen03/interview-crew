@@ -93,6 +93,8 @@ class InterviewController extends Controller
 
     public function store(Request $request)
     {
+        $id = Auth::user()->id;
+
         $request->validate([
             'title' =>'required', 
             'date' => 'required',
@@ -100,6 +102,7 @@ class InterviewController extends Controller
         ]);
 
         Interview::create([
+            'user_id' => $id,
             'title' => $request->title, 
             'date' => $request->date, 
             'field_id' => $request->field_id,
