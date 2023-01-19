@@ -9,7 +9,7 @@ class Interview extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'date', 'field_id'];
+
     public $timestamps = false;
     public function field(){
         return $this->belongsTo('App\Models\Field');

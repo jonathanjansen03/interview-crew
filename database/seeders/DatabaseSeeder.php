@@ -23,11 +23,11 @@ class DatabaseSeeder extends Seeder
         DB::insert('insert into fields (name) values (?)', ['Data Engineering']);
         DB::insert('insert into fields (name) values (?)', ['Machine Learning Expert']);
 
+        DB::insert('insert into interviews (user_id, title, date, field_id,status, shift) values (?,?,?,?,?,?)', [1, "SE Interview", '2023-01-15', 1, 'Done', 2]);
+        DB::insert('insert into interviews (user_id, title, date, field_id,status, shift) values (?,?,?,?,?,?)', [1, "SE Interview", '2023-01-19', 1, 'Done', 1]);
+        DB::insert('insert into interviews (user_id, title, date, field_id,status, shift) values (?,?,?,?,?,?)', [1, "SE Interview", '2023-02-19', 1, 'Accepted', 2]);
 
-        DB::insert('insert into interviews (user_id, title, date, field_id) values (?,?,?,?)', [1, "SE Interview", now(), 1]);
-        DB::insert('insert into interviews (user_id, title, date, field_id) values (?,?,?,?)', [2, "SE Interview", now(), 3]);
-        DB::insert('insert into interviews (user_id, title, date, field_id) values (?,?,?,?)', [3, "SE Interview", now(), 1]);
-
-        
+        DB::insert('insert into interviews (user_id, title, date, field_id,status, shift) values (?,?,?,?,?,?)', [2, "SE Interview",'2023-03-19', 3, 'Accepted', 3]);
+        DB::insert('insert into interviews (user_id, title, date, field_id,status, shift) values (?,?,?,?,?,?)', [3, "SE Interview", '2023-04-19', 1, 'Accepted', 4]);
     }
 }
