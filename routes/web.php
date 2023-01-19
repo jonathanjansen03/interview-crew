@@ -24,7 +24,7 @@ Route::middleware(['logged.user'])->group(function () {
     Route::get('/register', [UserController::class, 'registerView']);
     Route::get('/login', [UserController::class, 'loginView']);
 });
-    
+
 Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/home', [InterviewController::class, 'home']);
     Route::get('/logout', [UserController::class , 'logout']);
@@ -50,9 +50,6 @@ Route::get('/login', function() {
     return view('home.login');
 });
 
-Route::get('/profile', function() {
-    return view('user.profile');
-});
 
 Route::get('/profile/edit', function() {
     return view('user.edit-profile');
@@ -71,3 +68,11 @@ Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
 
 //both
 // Route::get('/profile', [UserController::class, 'user']);
+
+Route::get('/interview-history', function() {
+    return view('user.interview-history');
+});
+
+Route::get('/interview-list', function() {
+    return view('admin.interview-list');
+});

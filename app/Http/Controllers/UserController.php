@@ -102,6 +102,6 @@ class UserController extends Controller
     }
 
     public function user(){
-        return view('user');
+        return view('user.profile');
     }
 }

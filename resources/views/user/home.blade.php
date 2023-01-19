@@ -14,9 +14,11 @@
                 <h1 class="text-4xl font-extrabold">Book your interview schedule now!</h1>
                 <p class="text-xl font-medium mt-5">Don't miss this opportunity to practice your interview skills with the experts.</p>
             </div>
-            <button type="submit" class="xl:w-1/4 lg:w-1/3 md:w-1/3 flex items-center justify-center border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
-                Book now
-            </button>
+            <a href="/request-interview">
+                <button type="submit" class="xl:w-1/4 lg:w-1/3 md:w-1/3 flex items-center justify-center border border-transparent text-base font-medium rounded-md mt-7 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
+                    Book now
+                </button>
+            </a>
             <img src="{{ asset('/images/interviewer.png') }}" alt="" class="absolute bottom-0 right-0 w-5/6">
         </div>
 

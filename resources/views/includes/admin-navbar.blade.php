@@ -16,7 +16,7 @@
                 </button>
             </div>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0" style="gap: 2em;">
-                <a href="/home" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
+                <a href="/welcome-admin" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
                     Home
                 </a>
                 <a href="/profile" class="whitespace-nowrap text-base font-semibold text-gray-500 hover:text-blue-800 duration-200">
