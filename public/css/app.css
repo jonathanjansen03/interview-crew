@@ -667,6 +667,21 @@ video {
 .h-1{
   height: 0.25rem;
 }
+.h-5{
+  height: 1.25rem;
+}
+.h-16{
+  height: 4rem;
+}
+.h-12{
+  height: 3rem;
+}
+.h-10{
+  height: 2.5rem;
+}
+.h-9{
+  height: 2.25rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -727,6 +742,21 @@ video {
 }
 .w-11\/12{
   width: 91.666667%;
+}
+.w-2\/4{
+  width: 50%;
+}
+.w-2\/12{
+  width: 16.666667%;
+}
+.w-3\/12{
+  width: 25%;
+}
+.w-60{
+  width: 15rem;
+}
+.w-56{
+  width: 14rem;
 }
 .max-w-7xl{
   max-width: 80rem;
