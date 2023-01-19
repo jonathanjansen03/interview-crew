@@ -43,10 +43,12 @@ class UserController extends Controller
             if ($user->role == "Admin"){
                 return redirect('/welcome-admin');
             }
-            dd($user->role == "Admin");
-            // else 
-                return redirect('/home');
-        } 
+            
+            return redirect('/home');
+        }
+        else {
+            return redirect()->back()->with('errors', 'wrong username or password');
+        }
     }
 
     public function profileView(){
