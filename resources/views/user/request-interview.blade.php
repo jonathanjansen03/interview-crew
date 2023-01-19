@@ -19,9 +19,23 @@
                     <input type="text" id="title" name="title" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">
                 </div>
 
-                <div class="flex flex-col mt-5">
-                    <label for="date" class="font-medium">Date and Time</label>
-                    <input type="datetime-local" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none" id="date" name="date">
+                <div class="flex mt-5 gap-x-5 items-center">
+                    <div class="flex flex-col">
+                        <label for="date" class="font-medium">Date and Time</label>
+                        <input type="datetime-local" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none" id="date" name="date">
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="interview-shift" class="font-medium">Field</label>
+                        <select name="interview-shift" id="interview-shift" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none h-9 w-56">
+                            <option value="shift-1">07:00 - 09:00</option>
+                            <option value="shift-2">09:00 - 11:00</option>
+                            <option value="shift-3">11:00 - 13:00</option>
+                            <option value="shift-4">13:00 - 15:00</option>
+                            <option value="shift-5">15:00 - 17:00</option>
+                            <option value="shift-6">17:00 - 19:00</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="flex flex-col mt-5">
