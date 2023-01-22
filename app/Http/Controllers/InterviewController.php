@@ -125,4 +125,9 @@ class InterviewController extends Controller
         return redirect('/home');
     }
 
+    public function history(){
+        $interviews = Interview::all();
+        return view('user.interview-history', compact('interviews'));
+    }
+
 }

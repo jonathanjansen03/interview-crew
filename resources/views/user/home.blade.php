@@ -29,9 +29,9 @@
                     <p class="text-md font-medium mt-3">Date: {{$recentInterviews->date}}</p>
                     <p class="text-md font-medium mt-3">Time: {{$rTime}}</p>
                     <p class="text-md font-medium mt-3">Field: {{$rField}}</p>
-                    <button type="submit" class="xl:w-3/5 lg:w-4/5 md:w-full flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
+                    <a href="/interview-history" class="xl:w-3/5 lg:w-4/5 md:w-full flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
                         View Interview History
-                    </button>
+                    </a>
                 @endif
             </div>
 
