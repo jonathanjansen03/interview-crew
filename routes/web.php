@@ -32,11 +32,10 @@ Route::middleware(['unlogged.user'])->group(function () {
     Route::post('/store', [InterviewController::class, 'store']);
     Route::post('/edit-profile', [UserController::class, 'updateProfile']);
     Route::get('/edit-profile', [UserController::class, 'profileView']);
-    Route::post('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
+    Route::get('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
 });
 
 // Route::middleware(['admin.check'])->group(function () {
-
     Route::get('/welcome-admin', [UserController::class, 'adminView']);
     Route::get('/create-job-field', [UserController::class, 'createJobView']);
     Route::post('/create-job-field', [FieldController::class, 'store']);
