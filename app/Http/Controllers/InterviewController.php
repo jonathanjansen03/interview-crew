@@ -26,11 +26,16 @@ class InterviewController extends Controller
         $rShift = 1;
         $iShift = 1;
 
+        $iField = "";
+        $rField = "";
         if ($recentInterviews != null){
             $rShift = $recentInterviews->shift;
+            $rField = Field::find($recentInterviews->field_id)->name;
         }
-        if ($interviews != null ){
+        $count = $interviews->count();
+        if ($count != 0 ){
             $iShift = $interviews[0]->shift;
+            $iField = Field::find($interviews[0]->field_id)->name;
         }
 
         $rTime = "";
@@ -79,8 +84,6 @@ class InterviewController extends Controller
                 break;
         }
 
-        $rField = Field::find($recentInterviews->field_id)->name;
-        $iField = Field::find($interviews[0]->field_id)->name;
 
 
         return view('user.home', compact('interviews', 'recentInterviews', 'iTime', 'rTime', 'rField', 'iField'));
@@ -96,7 +99,6 @@ class InterviewController extends Controller
         
         $title = $request->title;
         $date = $request->date;
-        $fieldId = Field::where("name", $request->field_id)->get()->first()->id;
         $link = $request->link;
 
         $interview = new Interview;
@@ -105,8 +107,7 @@ class InterviewController extends Controller
         $interview->date  = $date;
         $interview->status = 'Accepted';
 
-
-        $interview->field_id = $fieldId;
+        $interview->field_id = $request->field_id;
         $interview->link = $link;
         $interview->shift = (int)$request->inverview_shift;
         $interview->save();
