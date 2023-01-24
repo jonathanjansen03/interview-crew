@@ -13,23 +13,27 @@
             <h3 class="text-black font-bold text-2xl mb-3">Interview History</h3>
             @foreach($interviews as $interview)
                 <div class="grid grid-cols-2 gap-x-10 my-3">
-                    <p class="font-medium align-middle">Username: {{Auth::user()->full_name}}</p>
-        
+                    <p class="font-medium align-middle">
+                        Username: {{Auth::user()->username}}
+                    </p>
                     <p class="font-medium align-middle">
                         Field: {{$interview->field->name}}
                     </p>
-                    
                     <p class="font-medium mt-3 align-middle">
                         Time: {{$interview->date}}
                     </p>
-
                     <p class="font-medium mt-3 align-middle">
                         Meeting Link: {{$interview->link}}
                     </p>
+                    <div class="flex justify-center col-span-2">
+                        <button type="submit" class="w-2/6 flex items-center justify-center py-2 px-0 border border-transparent text-sm font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200">
+                            Download CV
+                        </button>
+                    </div>
                 </div>
                 <hr class="h-px my-5 bg-blue-300 border-0 w-[95%]">
             @endforeach
-            
+
             {{ $interviews->links() }}
         </div>
     </main>

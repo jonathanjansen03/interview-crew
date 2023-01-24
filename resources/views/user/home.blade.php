@@ -30,6 +30,8 @@
                     <a href="/interview-history" class="xl:w-3/5 lg:w-4/5 md:w-full flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200 md:py-2 md:text-lg px-4">
                         View Interview History
                     </a>
+                @else
+                    <p class="text-md font-medium mt-3">You have no recent interviews.</p>
                 @endif
             </div>
 
@@ -43,6 +45,8 @@
                     <a href="/cancel/interview/{{$interviews[0]->id}}" class="xl:w-1/3 lg:w-1/3 md:w-1/3 flex items-center justify-center  border border-transparent text-base font-medium rounded-md mt-5 text-white bg-red-600 hover:bg-red-700 duration-200 md:py-2 md:text-lg px-5">
                         Cancel
                     </a>
+                @else
+                <p class="text-md font-medium mt-3">You have no upcoming interview.</p>
                 @endif
 
             </div>

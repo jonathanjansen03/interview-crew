@@ -48,8 +48,8 @@
                 </div>
 
                 <div class="block mt-5">
-                    <label for="interview-cv" class="font-medium">CV</label>
-                    <span class="sr-only">Choose profile photo</span>
+                    <label for="interview-cv" class="font-medium">CV (PDF)</label>
+                    <span class="sr-only">Upload CV</span>
                     <input type="file" id="interview-cv" class="block w-full font-medium text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100
                     ">
                 </div>
