@@ -9,7 +9,7 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-40 w-2/6 h-fit py-10 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-44 w-2/6 h-fit p-6 rounded-xl">
             {{-- ntar diganti {{username}} --}}
             <h3 class="text-black font-bold text-2xl">{{Auth::user()->full_name}}</h3>
 

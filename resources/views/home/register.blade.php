@@ -4,7 +4,7 @@
 
 @section('main-content')
 <main id="register" class="relative flex justify-center bg-[url('/images/interview.png')] bg-cover bg-no-repeat h-screen">
-    <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-fit h-fit py-10 px-6 rounded-xl">
+    <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-[4.5rem] w-fit h-fit p-6 rounded-xl">
         <h3 class="text-black font-bold text-2xl text-center">Register</h3>
 
         <form action="/register" method="POST" class="flex flex-col mt-5">

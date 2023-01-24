@@ -528,6 +528,54 @@ video {
   top: 3rem;
   bottom: 3rem;
 }
+.inset-y-8{
+  top: 2rem;
+  bottom: 2rem;
+}
+.inset-y-6{
+  top: 1.5rem;
+  bottom: 1.5rem;
+}
+.inset-y-4{
+  top: 1rem;
+  bottom: 1rem;
+}
+.inset-y-0{
+  top: 0px;
+  bottom: 0px;
+}
+.inset-y-9{
+  top: 2.25rem;
+  bottom: 2.25rem;
+}
+.inset-y-10{
+  top: 2.5rem;
+  bottom: 2.5rem;
+}
+.inset-y-44{
+  top: 11rem;
+  bottom: 11rem;
+}
+.inset-y-11{
+  top: 2.75rem;
+  bottom: 2.75rem;
+}
+.inset-y-1{
+  top: 0.25rem;
+  bottom: 0.25rem;
+}
+.inset-y-16{
+  top: 4rem;
+  bottom: 4rem;
+}
+.inset-y-20{
+  top: 5rem;
+  bottom: 5rem;
+}
+.inset-y-\[4\.5rem\]{
+  top: 4.5rem;
+  bottom: 4.5rem;
+}
 .top-0{
   top: 0px;
 }
@@ -644,6 +692,9 @@ video {
 .mb-16{
   margin-bottom: 4rem;
 }
+.ml-3{
+  margin-left: 0.75rem;
+}
 .block{
   display: block;
 }
@@ -745,6 +796,9 @@ video {
 .max-w-md{
   max-width: 28rem;
 }
+.flex-1{
+  flex: 1 1 0%;
+}
 .origin-top-right{
   transform-origin: top right;
 }
@@ -829,12 +883,23 @@ video {
 .border-0{
   border-width: 0px;
 }
+.border-t{
+  border-top-width: 1px;
+}
 .border-transparent{
   border-color: transparent;
 }
 .border-blue-800{
   --tw-border-opacity: 1;
   border-color: rgb(30 64 175 / var(--tw-border-opacity));
+}
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -888,6 +953,9 @@ video {
 }
 .p-8{
   padding: 2rem;
+}
+.p-6{
+  padding: 1.5rem;
 }
 .py-10{
   padding-top: 2.5rem;
@@ -1062,6 +1130,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
 .underline{
   text-decoration-line: underline;
 }
@@ -1184,6 +1256,11 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-50:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1248,6 +1325,10 @@ video {
     margin-top: 6rem;
   }
 
+  .sm\:block{
+    display: block;
+  }
+
   .sm\:flex{
     display: flex;
   }
@@ -1262,6 +1343,10 @@ video {
 
   .sm\:max-w-lg{
     max-width: 32rem;
+  }
+
+  .sm\:justify-end{
+    justify-content: flex-end;
   }
 
   .sm\:justify-center{

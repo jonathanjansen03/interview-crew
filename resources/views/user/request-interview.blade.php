@@ -9,7 +9,7 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-2/5 h-fit py-10 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-10 w-2/5 h-fit p-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Interview Schedule Request</h3>
 
             <form action="/store" method="POST" enctype="multipart/form-data" class="flex flex-col">
