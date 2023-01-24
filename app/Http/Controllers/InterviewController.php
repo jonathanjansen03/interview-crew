@@ -94,8 +94,7 @@ class InterviewController extends Controller
         return view('user.request-interview', compact('fields'));
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         
         $title = $request->title;
         $date = $request->date;
@@ -126,8 +125,16 @@ class InterviewController extends Controller
     }
 
     public function history(){
-        $interviews = Interview::all();
+        $id = Auth::id();
+        $interviews = Interview::where('user_id', $id)->where('status', 'Done')->paginate(3);
+
         return view('user.interview-history', compact('interviews'));
+    }
+
+    public function list(){
+        $interviews = Interview::paginate(3);
+
+        return view('admin.interview-list', compact('interviews'));
     }
 
 }

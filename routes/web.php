@@ -67,6 +67,4 @@ Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
 
 Route::get('/interview-history', [InterviewController::class, 'history']);
 
-Route::get('/interview-list', function() {
-    return view('admin.interview-list');
-});
+Route::get('/interview-list', [InterviewController::class, 'list']);
