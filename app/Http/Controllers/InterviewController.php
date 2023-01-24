@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Interview;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 use App\Models\Field;
  
@@ -97,9 +100,17 @@ class InterviewController extends Controller
     public function store(Request $request)
     {
         
+        $request->validate([
+            'cv' => 'mimes:pdf'
+        ]);
+
         $title = $request->title;
         $date = $request->date;
         $link = $request->link;
+
+        $file = $request->file('cv');
+        $new_file = 'CV'.'.' . $request->file('cv')->getClientOriginalExtension();
+        $file->move(storage_path('app/public/files/'), $new_file);
 
         $interview = new Interview;
         $interview->user_id = Auth::id();
@@ -110,6 +121,7 @@ class InterviewController extends Controller
         $interview->field_id = $request->field_id;
         $interview->link = $link;
         $interview->shift = (int)$request->inverview_shift;
+        $interview->cv = $new_file;
         $interview->save();
 
 
@@ -128,6 +140,11 @@ class InterviewController extends Controller
     public function history(){
         $interviews = Interview::all();
         return view('user.interview-history', compact('interviews'));
+    }
+
+    public function download(){
+        $path = storage_path('app/public/files/CV.pdf');
+        return response()->download($path);
     }
 
 }
