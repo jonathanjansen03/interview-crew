@@ -62,3 +62,4 @@ Route::get('/test', function() {
 
 //user
 Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
+Route::get('/download-cv', [InterviewController::class, 'download']);

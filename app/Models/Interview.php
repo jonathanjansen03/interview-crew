@@ -9,7 +9,7 @@ class Interview extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['user_id', 'title', 'date', 'field_id', 'shift', 'link'];
+    protected $fillable = ['user_id', 'title', 'date', 'field_id', 'shift', 'cv', 'link'];
     public $timestamps = false;
     
     public function field(){
