@@ -8,8 +8,8 @@
         <img src="{{ asset('/images/triangular-ribbon.png') }}" alt="" class="fixed top-80 overflow-hidden w-96">
     </div>
 
-    <div class="flex relative gap-x-16 items-center justify-center mt-4 mb-16">
-        <div id="book-now-card" class="relative flex flex-col bg-white rounded-xl drop-shadow-lg w-2/5 left-10 py-16 pl-12">
+    <div class="flex relative gap-x-16 items-center justify-center mt-5 mb-16">
+        <div class="relative flex flex-col bg-white rounded-xl drop-shadow-lg w-2/5 left-10 py-16 pl-12 h-[37rem]">
             <div class="w-4/5">
                 <h1 class="text-4xl font-extrabold">Book your interview schedule now!</h1>
                 <p class="text-xl font-medium mt-5">Don't miss this opportunity to practice your interview skills with the experts.</p>
