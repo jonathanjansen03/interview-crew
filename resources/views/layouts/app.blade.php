@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="relative bg-gray-50 min-h-screen">
-        {{-- nanti pake if else, kalo udah login ganti ke user navbar --}}
-        @guest 
+        @guest
             @include('includes.guest-navbar')
-        @endguest 
+        @endguest
+
         @auth
             @include('includes.user-navbar')
         @endauth

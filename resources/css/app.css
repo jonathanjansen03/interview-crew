@@ -3,19 +3,3 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-#landing-main {
-    margin-bottom: 25rem;
-}
-
-#reach-out {
-    margin-top: 30rem;
-}
-
-#book-now-card {
-    height: 37rem;
-}
-
-#login {
-    background-image: url('/images/interview/png');
-}
