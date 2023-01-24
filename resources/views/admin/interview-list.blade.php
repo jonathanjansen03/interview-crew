@@ -27,9 +27,9 @@
                         Meeting Link: {{ $i->link }}
                     </p>
                     <div class="flex justify-center col-span-2">
-                        <button type="submit" class="w-2/6 flex items-center justify-center py-2 px-0 border border-transparent text-sm font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200">
+                        <a href="/download-cv" class="w-2/6 flex items-center justify-center py-2 px-0 border border-transparent text-sm font-medium rounded-md mt-5 text-white bg-blue-800 hover:bg-blue-900 duration-200">
                             Download CV
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <hr class="h-px my-5 bg-blue-300 border-0 w-11/12">

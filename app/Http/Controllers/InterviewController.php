@@ -138,7 +138,7 @@ class InterviewController extends Controller
 
     public function history(){
         $id = Auth::id();
-        $interviews = Interview::where('user_id', $id)->where('status', 'Done')->paginate(3);
+        $interviews = Interview::where('user_id', $id)->paginate(3);
 
         return view('user.interview-history', compact('interviews'));
     }
