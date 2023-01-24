@@ -34,6 +34,8 @@ Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/edit-profile', [UserController::class, 'editProfileView']);
     Route::get('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
     Route::get('/profile', [UserController::class, 'profileView']);
+    Route::get('/interview-history', [InterviewController::class, 'history']);
+    Route::get('/download-cv', [InterviewController::class, 'download']);
 });
 
 // Route::middleware(['admin.check'])->group(function () {
@@ -65,6 +67,5 @@ Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
 //both
 // Route::get('/profile', [UserController::class, 'user']);
 
-Route::get('/interview-history', [InterviewController::class, 'history']);
 
 Route::get('/interview-list', [InterviewController::class, 'list']);

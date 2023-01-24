@@ -26,6 +26,9 @@
                     <p class="font-medium mt-3 align-middle">
                         Meeting Link: {{$interview->link}}
                     </p>
+                    <p class="font-medium mt-3 align-middle">
+                        CV: <a href="/download-cv"><button>download</button></a>
+                    </p>
                 </div>
                 <hr class="h-px my-5 bg-blue-300 border-0 w-[95%]">
             @endforeach
