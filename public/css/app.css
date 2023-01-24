@@ -524,18 +524,6 @@ video {
   top: 7rem;
   bottom: 7rem;
 }
-.inset-y-20{
-  top: 5rem;
-  bottom: 5rem;
-}
-.inset-y-16{
-  top: 4rem;
-  bottom: 4rem;
-}
-.inset-y-10{
-  top: 2.5rem;
-  bottom: 2.5rem;
-}
 .inset-y-12{
   top: 3rem;
   bottom: 3rem;
@@ -595,6 +583,10 @@ video {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
 }
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -634,6 +626,24 @@ video {
 .mt-4{
   margin-top: 1rem;
 }
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+.mb-4{
+  margin-bottom: 1rem;
+}
+.mb-48{
+  margin-bottom: 12rem;
+}
+.mb-8{
+  margin-bottom: 2rem;
+}
+.mb-12{
+  margin-bottom: 3rem;
+}
+.mb-16{
+  margin-bottom: 4rem;
+}
 .block{
   display: block;
 }
@@ -670,12 +680,6 @@ video {
 }
 .h-9{
   height: 2.25rem;
-}
-.h-full{
-  height: 100%;
-}
-.h-auto{
-  height: auto;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -729,11 +733,11 @@ video {
 .w-4\/12{
   width: 33.333333%;
 }
-.w-56{
-  width: 14rem;
-}
 .w-4\/6{
   width: 66.666667%;
+}
+.w-56{
+  width: 14rem;
 }
 .max-w-7xl{
   max-width: 80rem;
@@ -870,9 +874,6 @@ video {
 .bg-cover{
   background-size: cover;
 }
-.bg-fixed{
-  background-attachment: fixed;
-}
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
@@ -955,6 +956,10 @@ video {
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pt-16{
   padding-top: 4rem;
@@ -1053,6 +1058,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
+.text-slate-500{
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
 .underline{
   text-decoration-line: underline;
 }
@@ -1071,10 +1080,6 @@ video {
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-slate-900{
-  --tw-shadow-color: #0f172a;
-  --tw-shadow: var(--tw-shadow-colored);
-}
 .ring-1{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1089,10 +1094,6 @@ video {
 }
 .drop-shadow-lg{
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.drop-shadow{
-  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition{
@@ -1120,6 +1121,47 @@ video {
 
 #login {
     background-image: url('/images/interview/png');
+}
+
+.file\:mr-4::file-selector-button{
+  margin-right: 1rem;
+}
+
+.file\:rounded-full::file-selector-button{
+  border-radius: 9999px;
+}
+
+.file\:border-0::file-selector-button{
+  border-width: 0px;
+}
+
+.file\:bg-violet-50::file-selector-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
+}
+
+.file\:py-2::file-selector-button{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.file\:px-4::file-selector-button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.file\:text-sm::file-selector-button{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.file\:font-semibold::file-selector-button{
+  font-weight: 600;
+}
+
+.file\:text-violet-700::file-selector-button{
+  --tw-text-opacity: 1;
+  color: rgb(109 40 217 / var(--tw-text-opacity));
 }
 
 .hover\:bg-blue-900:hover{
@@ -1155,6 +1197,11 @@ video {
 .hover\:text-blue-500:hover{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.hover\:file\:bg-violet-100::file-selector-button:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
 }
 
 .focus\:border-sky-500:focus{

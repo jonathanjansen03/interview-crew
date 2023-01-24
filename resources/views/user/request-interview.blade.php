@@ -47,6 +47,13 @@
                     </select>
                 </div>
 
+                <div class="block mt-5">
+                    <label for="interview-cv" class="font-medium">CV</label>
+                    <span class="sr-only">Choose profile photo</span>
+                    <input type="file" id="interview-cv" class="block w-full font-medium text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100
+                    ">
+                </div>
+
                 <div class="flex flex-col mt-5">
                     <label for="link" class="font-medium">Meeting Link</label>
                     <input type="text" id="link" name="link" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">

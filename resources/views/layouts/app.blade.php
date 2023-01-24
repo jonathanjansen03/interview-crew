@@ -20,7 +20,7 @@
         @yield('main-content')
     </div>
 
-    <footer class="fixed bg-white inset-x-0 bottom-0 py-3 text-center">
+    <footer class="fixed bg-white inset-x-0 bottom-0 py-3 text-center z-50">
         <span class="text-black font-semibold">
             &#169; InterviewCrew, All Rights Reserved
         </span>
