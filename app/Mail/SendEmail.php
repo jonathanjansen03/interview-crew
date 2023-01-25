@@ -29,6 +29,6 @@ class SendEmail extends Mailable
     public function build()
     {
         $tes = "tes";
-        return $this->view('user.email');
+        return $this->view('admin.email');
     }
 }
