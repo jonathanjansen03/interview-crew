@@ -28,6 +28,23 @@
                 </p>
             </div>
         </form>
+        @if (\Session::has('errors'))
+                    <div class="flex items-center text-center justify-center">
+                        <div style="text-align: center;">
+                            <h1 style="text-align: center; color: red;">
+                                {{ \Session::get('errors') }}
+                            </h1>
+                        </div>
+                    </div>
+                @elseif (\Session::has('success'))
+                    <div class="flex items-center text-center justify-center">
+                        <div style="text-align: center;">
+                            <h1 style="text-align: center; color: green;">
+                                {{ \Session::get('success') }}
+                            </h1>
+                        </div>
+                    </div>
+                @endif
     </div>
 </main>
 @endsection

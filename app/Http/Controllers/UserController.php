@@ -90,6 +90,13 @@ class UserController extends Controller
     
 
     public function register(Request $request){
+
+        $request->validate([
+            'fullName' => 'min:3',
+            'username' => 'min:3',
+            'password' => 'min:8'
+        ]);
+
         $username = $request->username;
         $password = $request->password;
         $email = $request->email;
