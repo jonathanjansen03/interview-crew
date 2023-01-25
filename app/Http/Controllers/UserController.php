@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 
 class UserController extends Controller
 {
@@ -103,6 +105,10 @@ class UserController extends Controller
         $user->phone_number = $phone;
         $user->role = 'Member';
         $user->save();
+
+
+        Mail::to($email)->send(new SendEmail);
+        
 
         return redirect()->back()->with('success', 'User Registered Succesfully');
     }

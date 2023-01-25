@@ -4,20 +4,29 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Interview;
+use App\Models\User;
+use App\Models\Field;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
-use App\Models\Field;
  
 class InterviewController extends Controller
 {
 
     public function cancelInterview($id){
         Interview::destroy($id);
-        
+
         return redirect('/home');
+    }
+
+    public function interviewList(){
+        $interviews = Interview::all(); 
+        $fields = Field::all();
+        $users = User::all();
+
+        
     }
 
     public function home(){
@@ -134,7 +143,7 @@ class InterviewController extends Controller
 
     public function history(){
         $id = Auth::id();
-        $interviews = Interview::where('user_id', $id)->paginate(3);
+        $interviews = Interview::where('user_id', $id)->where('status','Done')->paginate(3);
 
         return view('user.interview-history', compact('interviews'));
     }
