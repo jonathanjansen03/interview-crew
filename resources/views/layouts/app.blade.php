@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="relative bg-gray-50 min-h-screen">
-        {{-- nanti pake if else, kalo udah login ganti ke user navbar --}}
-        @guest 
+        @guest
             @include('includes.guest-navbar')
-        @endguest 
+        @endguest
+
         @auth
             @include('includes.user-navbar')
         @endauth
@@ -20,7 +20,7 @@
         @yield('main-content')
     </div>
 
-    <footer class="relative bg-white inset-x-0 bottom-0 py-3 text-center">
+    <footer class="relative bg-white inset-x-0 bottom-0 py-3 text-center z-50">
         <span class="text-black font-semibold">
             &#169; InterviewCrew, All Rights Reserved
         </span>

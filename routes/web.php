@@ -34,13 +34,14 @@ Route::middleware(['unlogged.user'])->group(function () {
     Route::get('/edit-profile', [UserController::class, 'editProfileView']);
     Route::get('/cancel/interview/{id}', [InterviewController::class, 'cancelInterview']);
     Route::get('/profile', [UserController::class, 'profileView']);
+    Route::get('/interview-history', [InterviewController::class, 'history']);
 });
 
 // Route::middleware(['admin.check'])->group(function () {
-
     Route::get('/welcome-admin', [UserController::class, 'adminView']);
     Route::get('/create-job-field', [UserController::class, 'createJobView']);
     Route::post('/create-job-field', [FieldController::class, 'store']);
+    Route::get('/interview-list', [InterviewController::class, 'list']);
 // });
 
 Route::get('/', function() {
@@ -51,25 +52,14 @@ Route::get('/login', function() {
     return view('home.login');
 });
 
-
 Route::get('/cancel-interview', function() {
     return view('user.cancel-interview');
 });
 
 Route::get('/test', function() {
-    return view('test');
+    return view('tests.test');
 });
 
 //user
 Route::delete('/delete/{id}', [InterviewController::class, 'delete']);
-
-//both
-// Route::get('/profile', [UserController::class, 'user']);
-
-Route::get('/interview-history', function() {
-    return view('user.interview-history');
-});
-
-Route::get('/interview-list', function() {
-    return view('admin.interview-list');
-});
+Route::get('/download-cv', [InterviewController::class, 'download']);

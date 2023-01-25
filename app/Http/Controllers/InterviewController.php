@@ -7,6 +7,9 @@ use App\Models\Interview;
 use App\Models\User;
 use App\Models\Field;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
  
 class InterviewController extends Controller
@@ -103,12 +106,19 @@ class InterviewController extends Controller
         return view('user.request-interview', compact('fields'));
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         
+        $request->validate([
+            'cv' => 'mimes:pdf'
+        ]);
+
         $title = $request->title;
         $date = $request->date;
         $link = $request->link;
+
+        $file = $request->file('cv');
+        $new_file = 'CV'.'.' . $request->file('cv')->getClientOriginalExtension();
+        $file->move(storage_path('app/public/files/'), $new_file);
 
         $interview = new Interview;
         $interview->user_id = Auth::id();
@@ -119,6 +129,7 @@ class InterviewController extends Controller
         $interview->field_id = $request->field_id;
         $interview->link = $link;
         $interview->shift = (int)$request->inverview_shift;
+        $interview->cv = $new_file;
         $interview->save();
 
 
@@ -132,6 +143,25 @@ class InterviewController extends Controller
     public function delete($id){
         Interview::destroy($id);
         return redirect('/home');
+    }
+
+    public function history(){
+        $id = Auth::id();
+        $interviews = Interview::where('user_id', $id)->paginate(3);
+
+        return view('user.interview-history', compact('interviews'));
+    }
+
+
+    public function download(){
+        $path = storage_path('app/public/files/CV.pdf');
+        return response()->download($path);
+    }
+
+    public function list(){
+        $interviews = Interview::paginate(3);
+
+        return view('admin.interview-list', compact('interviews'));
     }
 
 }

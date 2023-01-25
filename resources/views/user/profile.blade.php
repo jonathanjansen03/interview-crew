@@ -9,18 +9,15 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-40 w-2/6 h-fit py-10 px-6 rounded-xl">
-            {{-- ntar diganti {{username}} --}}
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-44 w-2/6 h-fit p-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl">{{Auth::user()->full_name}}</h3>
 
             <hr class="mt-5">
 
             <p class="font-medium mt-5">
-                {{-- ntar diganti {{email}} --}}
                 Email: {{Auth::user()->email}}
             </p>
 
-            {{-- ntar diganti {{phone}} --}}
             <p class="font-medium mt-5">
                 Phone: {{Auth::user()->phone_number}}
             </p>

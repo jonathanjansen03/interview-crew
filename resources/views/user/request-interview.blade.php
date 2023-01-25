@@ -9,7 +9,7 @@
     </div>
     
     <main class="relative flex justify-center">
-        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-14 w-2/5 h-fit py-10 px-6 rounded-xl">
+        <div class="flex flex-col justify-center absolute bg-white drop-shadow-lg inset-y-10 w-2/5 h-fit p-6 rounded-xl">
             <h3 class="text-black font-bold text-2xl text-center">Interview Schedule Request</h3>
 
             <form action="/store" method="POST" enctype="multipart/form-data" class="flex flex-col">
@@ -45,6 +45,13 @@
                             <option value="{{$field->id}}">{{$field->name}}</option>
                         @endforeach
                     </select>
+                </div>
+
+                <div class="block mt-5">
+                    <label for="cv" class="font-medium">CV (PDF)</label>
+                    <span class="sr-only">Upload CV</span>
+                    <input type="file" id="cv" name="cv" class="block w-full font-medium text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100
+                    ">
                 </div>
 
                 <div class="flex flex-col mt-5">

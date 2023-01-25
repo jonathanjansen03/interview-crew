@@ -3,13 +3,13 @@
 @section('title', 'Landing')
 
 @section('main-content')
-    <main id="landing-main" class="lg:relative mt-10">
+    <main class="lg:relative mt-10 mb-[25rem]">
         <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
             <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
                 <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
                     <span class="block xl:inline">Not ready for interview?</span>
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+                <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl font-medium">
                     Prepare your interview skills here to achieve your career dreams!
                 </p>
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
@@ -30,10 +30,10 @@
             <img class="lg:absolute lg:inset-0 lg:w-full" src="{{ asset('/images/hero-pic.png') }}" alt="">
         </div>
 
-        <section id="about-us" class="relative h-64">
+        <section class="relative h-64">
             <div class="absolute top-72 bottom-0 px-72">
                 <h1 class="text-center text-4xl font-bold">About Us</h1>
-                <p class="text-center text-lg mt-20">
+                <p class="text-center text-lg mt-20 font-medium">
                     InterviewCrew is a platform to help people who are beginners in the world of job interviews. We will be a third party to bring together those who wish to practice their interview skills with our selected people who are experienced in their fields. We hope that in the future people who are still beginners in the world of work can train their soft skills better so that they are better prepared to meet company standards.
                 </p>
             </div>
@@ -43,27 +43,27 @@
             </div>
         </section>
 
-        <section id="advantages" class="relative h-64 top-96 pt-32 z-50">
+        <section class="relative h-64 top-96 pt-32 z-50">
             <h1 class="text-center text-4xl font-bold">Advantages</h1>
             <div class="flex justify-center gap-x-8 px-80 mt-20">
                 <div class="flex flex-col items-center bg-blue-300 rounded-xl p-5 w-72">
                     <img src="{{ asset('/images/flexibility.png') }}" alt="" class="w-36">
                     <h5 class="font-bold text-2xl mt-5">Flexibility</h5>
-                    <p class="text-center mt-1">
+                    <p class="text-center mt-1 font-medium">
                         Can set the time and fields that are suitable for the user when making an interview request.
                     </p>
                 </div>
                 <div class="flex flex-col items-center bg-blue-200 rounded-xl p-3 w-72">
                     <img src="{{ asset('/images/free.png') }}" alt="" class="w-36">
                     <h5 class="font-bold text-2xl mt-5">FREE</h5>
-                    <p class="text-center">
+                    <p class="text-center mt-1 font-medium">
                         There is no need to pay for training interviews with trusted people of our choice.
                     </p>
                 </div>
                 <div class="flex flex-col items-center bg-blue-300 rounded-xl p-3 w-72">
                     <img src="{{ asset('/images/professional.png') }}" alt="" class="w-36">
                     <h5 class="font-bold text-2xl mt-5">Professional</h5>
-                    <p class="text-center">
+                    <p class="text-center mt-1 font-medium">
                         We have chosen HRD who is trusted and experienced in their field for a long time.
                     </p>
                 </div>
@@ -73,7 +73,7 @@
             </div>
         </section>
 
-        <section id="reach-out">
+        <section class="mt-[30rem]">
             <div class="relative bg-white overflow-hidden top-96 -bottom-96">
                 <div class="relative pt-6 pb-12">
                     <section class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
