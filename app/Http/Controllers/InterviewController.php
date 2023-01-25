@@ -4,17 +4,26 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Interview;
+use App\Models\User;
+use App\Models\Field;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use App\Models\Field;
  
 class InterviewController extends Controller
 {
 
     public function cancelInterview($id){
         Interview::destroy($id);
-        
+
         return redirect('/home');
+    }
+
+    public function interviewList(){
+        $interviews = Interview::all(); 
+        $fields = Field::all();
+        $users = User::all();
+
+        
     }
 
     public function home(){
