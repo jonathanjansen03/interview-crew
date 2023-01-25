@@ -51,13 +51,51 @@
             </div>
         </form>
         @if (\Session::has('errors'))
-            <div class="flex items-center text-center justify-center">
-                <div style="text-align: center;">
-                    <h1 style="text-align: center; color: red;">
-                        {{ \Session::get('errors') }}
-                    </h1>
+            @error('fullName')
+                <div class="flex items-center text-center justify-center">
+                    <div style="text-align: center;">
+                        <h1 style="text-align: center; color: red;">
+                            {{ $message }}
+                        </h1>
+                    </div>
                 </div>
-            </div>
+            @enderror
+            @error('username')
+                <div class="flex items-center text-center justify-center">
+                    <div style="text-align: center;">
+                        <h1 style="text-align: center; color: red;">
+                            {{ $message }}
+                        </h1>
+                    </div>
+                </div>
+            @enderror
+            @error('email')
+                <div class="flex items-center text-center justify-center">
+                    <div style="text-align: center;">
+                        <h1 style="text-align: center; color: red;">
+                            {{ $message }}
+                        </h1>
+                    </div>
+                </div>
+            @enderror
+            @error('password')
+                <div class="flex items-center text-center justify-center">
+                    <div style="text-align: center;">
+                        <h1 style="text-align: center; color: red;">
+                            {{ $message }}
+                        </h1>
+                    </div>
+                </div>
+            @enderror
+            @error('phone')
+                <div class="flex items-center text-center justify-center">
+                    <div style="text-align: center;">
+                        <h1 style="text-align: center; color: red;">
+                            {{ $message }}
+                        </h1>
+                    </div>
+                </div>
+            @enderror
         @elseif (\Session::has('success'))
             <div class="flex items-center text-center justify-center">
                 <div style="text-align: center;">

@@ -64,20 +64,22 @@ class UserController extends Controller
     }
 
     public function updateProfile(Request $request){        
+        $user = User::find(Auth::id());
+
         $username = $request->username;
         $password = $request->password;
         $email = $request->email;
         $phone = $request->phone;
         $confirmPass = $request->confirm_password;
         $fullName = $request->full_name;
+        $role = $user->role;
 
-        $user = User::find(Auth::id());
         $user->full_name = $fullName;
         $user->username = $username;
         $user->password = bcrypt($password);
         $user->email = $email;
         $user->phone_number = $phone;
-        $user->role = 'Member';
+        $user->role = $role;
         $user->save();
 
         return redirect('/home');
@@ -94,7 +96,9 @@ class UserController extends Controller
         $request->validate([
             'fullName' => 'min:3',
             'username' => 'min:3',
-            'password' => 'min:8'
+            'email' => 'email',
+            'password' => 'min:8',
+            'phone' => 'required|min:11|numeric'
         ]);
 
         $username = $request->username;
