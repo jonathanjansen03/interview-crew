@@ -31,7 +31,6 @@
                 </div>
             </div>
 
-
             <div class="flex flex-col mt-5">
                 <label for="update-email" class="font-medium">Email</label>
                 <input type="text" id="update-email" name="email" class="border px-2 py-1 rounded-lg bg-slate-200 focus:border-sky-500 focus:outline-none">

@@ -34,7 +34,6 @@ class InterviewController extends Controller
         $recentInterviews = Interview::where('user_id', $id)->where('status', 'Done')->get()->last();
         $interviews = Interview::where('user_id', $id)->where('status', 'Accepted')->get();
 
-
         $rShift = 1;
         $iShift = 1;
 
@@ -96,8 +95,6 @@ class InterviewController extends Controller
                 break;
         }
 
-
-
         return view('user.home', compact('interviews', 'recentInterviews', 'iTime', 'rTime', 'rField', 'iField'));
     }
 
@@ -132,7 +129,6 @@ class InterviewController extends Controller
         $interview->cv = $new_file;
         $interview->save();
 
-
         return redirect('/home');
     }
     
@@ -151,7 +147,6 @@ class InterviewController extends Controller
 
         return view('user.interview-history', compact('interviews'));
     }
-
 
     public function download(){
         $path = storage_path('app/public/files/CV.pdf');
