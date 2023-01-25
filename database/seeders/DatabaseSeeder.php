@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(3)->create();
         \App\Models\User::factory()->count(1)->isAdmin()->create();
 
-
         DB::insert('insert into fields (name) values (?)', ['Software Engineering']);
         DB::insert('insert into fields (name) values (?)', ['Data Mining']);
         DB::insert('insert into fields (name) values (?)', ['Data Science']);
